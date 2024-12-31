@@ -1,0 +1,13 @@
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def apply_discount(self, discount):
+        return self.price * (1 - discount / 100)
+
+# Example usage
+product = Product(input("Enter the product name: "), float(input("Enter the product price: ")))
+discount = float(input("Enter discount percentage: "))
+final_price = product.apply_discount(discount)
+print(f"The final price of the product after discount is: {final_price}")
